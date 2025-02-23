@@ -21,10 +21,15 @@ public class Assignment {
 
     public static void main(String[] args) {
         // inputs
-        int simulationDuration = 1800;
-        int averageArrivalRate = 2;
-        int averageServiceRate = 10;
+        int simulationDuration = Integer.valueOf(args[0]);
+        int averageArrivalRate = Integer.valueOf(args[1]);
+        int averageServiceRate = Integer.valueOf(args[2]);
+//        int simulationDuration = 1800;
+//        int averageArrivalRate = 2;
+//        int averageServiceRate = 10;
         // run simulation
+        System.out.println("Running simulation, simulationDuration=" + simulationDuration + ", averageArrivalRate="
+                + averageArrivalRate + ", averageServiceRate=" + averageServiceRate);
         new Simulator(simulationDuration, averageArrivalRate, averageServiceRate,
                 Arrays.asList(
                         SingleQueueProcessor.NAME,
